@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
         TextView tv = (TextView)findViewById(R.id.hello);
         EditText et1= (EditText)findViewById(R.id.editText);
         EditText et2= (EditText)findViewById(R.id.editText2);
-        String URLCaniasConnector ="http://92.62.131.33:8080/caniasWS604/services/iasWebService?wsdl";
-        CaniasConnect CC = new CaniasConnect("d4rbas","ARNASDIGI","CANIAS","TEST","E","00",URLCaniasConnector);
+        String URLCaniasConnector ="";
+        CaniasConnect CC = new CaniasConnect("","","CANIAS","TEST","E","00",URLCaniasConnector);
         LoginResponse iCanias = CC.login();
         tv.setText(iCanias.getSessionId()+" "+iCanias.getErrorMessage()+" "+iCanias.getContactNum()+" "+iCanias.isSuccess());
 
